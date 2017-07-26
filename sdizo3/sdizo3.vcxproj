@@ -113,6 +113,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\source</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,6 +140,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\alghoritms\BackpackGreedy\BackpackGreedy.h" />
+    <ClInclude Include="Source\alghoritms\BackpackBruteforce\BackpackBruteforce.h" />
+    <ClInclude Include="Source\alghoritms\IBackpackAlghoritm.h" />
     <ClInclude Include="Source\views\backpackView\BackpackMenu.h" />
     <ClInclude Include="Source\views\salesmanView\SalesmanMenu.h" />
     <ClInclude Include="Source\controllers\salesmanController\SalesmanController.h" />
@@ -152,6 +156,8 @@
     <ClInclude Include="Source\views\genericView\GenericView.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\alghoritms\BackpackGreedy\BackpackGreedy.cpp" />
+    <ClCompile Include="Source\alghoritms\BackpackBruteforce\BackpackBruteforce.cpp" />
     <ClCompile Include="Source\views\backpackView\BackpackMenu.cpp" />
     <ClCompile Include="Source\views\salesmanView\SalesmanMenu.cpp" />
     <ClCompile Include="Source\controllers\salesmanController\SalesmanController.cpp" />

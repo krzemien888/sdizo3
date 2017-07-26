@@ -8,12 +8,10 @@ SalesmanController::SalesmanController()
 	this->view = std::make_unique<SalesmanMenu>();
 }
 
-void SalesmanController::parseFileHeader(std::string header)
+void SalesmanController::parseFileHeader(const std::string & header)
 {
-
 }
 
-void SalesmanController::parseFileData(std::string line)
+void SalesmanController::parseFileData(const std::string & line)
 {
-
 }

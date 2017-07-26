@@ -9,6 +9,7 @@ public:
 	virtual ~GenericController() = default;
 	virtual void parseInput(const std::string &input);
 	virtual void printView();
+	virtual void printDataState() {};
 
 	bool isRunning();
 	void Run();

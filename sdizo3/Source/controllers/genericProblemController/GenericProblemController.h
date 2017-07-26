@@ -8,9 +8,10 @@ public:
 	GenericProblemController() = default;
 	virtual ~GenericProblemController() = default;
 
-	void loadFromFile();
+	virtual void loadFromFile() final;
 
-	virtual void parseFileHeader(std::string header) = 0;
-	virtual void parseFileData(std::string line) = 0;
+	virtual void parseFileHeader(const std::string &header) = 0;
+	virtual void parseFileData(const std::string &line) = 0;
+
 };
 

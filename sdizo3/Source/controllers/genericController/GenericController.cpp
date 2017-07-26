@@ -23,6 +23,7 @@ void GenericController::parseInput(const std::string & input)
 
 void GenericController::printView()
 {
+	printDataState();
 	view->print();
 }
 

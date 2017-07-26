@@ -7,7 +7,7 @@ public:
 	SalesmanController();
 	virtual ~SalesmanController() = default;
 
-	void parseFileHeader(std::string header) override;
-	void parseFileData(std::string line) override;
+	void parseFileHeader(const std::string &header) override;
+	void parseFileData(const std::string &line) override;
 };
 

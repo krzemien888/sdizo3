@@ -6,7 +6,7 @@ using namespace std;
 void appMenu::print()
 {
 	int i = 1;
-	cout << "-----Projekt 2 ze Struktur danych i z³o¿onoœci obliczeniowej-----" << endl;
+	cout << "-----Projekt 3 ze Struktur danych i z³o¿onoœci obliczeniowej-----" << endl;
 	cout << i++ << " : Problem plecakowy" << endl;
 	cout << i++ << " : Problem komiwoja¿era" << endl;
 	cout << i++ << " : Uruchom pomiary" << endl;
