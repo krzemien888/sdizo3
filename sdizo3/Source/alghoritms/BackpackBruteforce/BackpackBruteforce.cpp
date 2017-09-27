@@ -10,29 +10,43 @@ void BackpackBruteforce::apply(const std::vector<int> &weights, const std::vecto
 {
 	int bestValue = 0;
 	solution.clear();
-	auto subSets = findAllSubsets(weights.size()-1);
 
-	for(auto set : subSets)
+	std::vector<Item> bestSolution;
+
+	for (unsigned long long currSubset = 1; currSubset < pow(2, weights.size()); currSubset++)
 	{
 		int currValue = 0, currWeight = 0;
-		for (auto index : set)
+		unsigned long long currItem = 1;
+		std::vector<Item> currSolution;
+
+		while (currItem <= currSubset && currWeight <= backpackSize)
 		{
-			currWeight += weights[index];
-			currValue += values[index];
+			if (((currItem & currSubset) != 0))
+			{
+				int currIndex = (int)log2(currItem);
+				if(((weights[currIndex] + currWeight) <= backpackSize))
+				{
+					Item i = { values[currIndex], weights[currIndex] };
+					currValue += values[currIndex];
+					currWeight += weights[currIndex];
+					currSolution.push_back(i);
+				}
+				else
+				{
+					break;
+				}
+			}
+			currItem *= 2;
 		}
 
-		if (bestValue < currValue && currWeight <= backpackSize)
+		if (currValue > bestValue)
 		{
-			solution.clear();
 			bestValue = currValue;
-			for(auto index : set)
-			{
-				Item i = { values[index], weights[index] };
-				solution.push_back(i);
-			}
+			bestSolution = currSolution;
 		}
 	}
-	
+
+	solution = bestSolution;
 }
 
 std::vector<Item> BackpackBruteforce::getSolution()

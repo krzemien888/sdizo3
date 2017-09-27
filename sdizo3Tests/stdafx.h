@@ -1,6 +1,6 @@
-// stdafx.h: do³¹cz plik do standardowych systemowych plików do³¹czanych,
-// lub specyficzne dla projektu pliki do³¹czane, które s¹ czêsto wykorzystywane, ale
-// s¹ rzadko zmieniane
+// stdafx.h : include file for standard system include files,
+// or project specific include files that are used frequently, but
+// are changed infrequently
 //
 
 #pragma once
@@ -22,4 +22,6 @@
 #include <queue>
 
 
-// TODO: W tym miejscu odwo³aj siê do dodatkowych nag³ówków wymaganych przez program
+
+
+// TODO: reference additional headers your program requires here

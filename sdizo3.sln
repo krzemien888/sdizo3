@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sdizo3", "sdizo3\sdizo3.vcxproj", "{7B38A206-33BC-47BA-850B-28071E11A0DF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sdizo3Main", "sdizo3Main\sdizo3Main.vcxproj", "{FBB1AD04-FD45-46A5-B7AA-FF3D53D75934}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sdizo3Tests", "sdizo3Tests\sdizo3Tests.vcxproj", "{B160ABB1-42DC-48F3-BE2C-80B1DA21753C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7B38A206-33BC-47BA-850B-28071E11A0DF} = {7B38A206-33BC-47BA-850B-28071E11A0DF}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +28,27 @@ Global
 		{7B38A206-33BC-47BA-850B-28071E11A0DF}.Release|x64.Build.0 = Release|x64
 		{7B38A206-33BC-47BA-850B-28071E11A0DF}.Release|x86.ActiveCfg = Release|Win32
 		{7B38A206-33BC-47BA-850B-28071E11A0DF}.Release|x86.Build.0 = Release|Win32
+		{FBB1AD04-FD45-46A5-B7AA-FF3D53D75934}.Debug|x64.ActiveCfg = Debug|x64
+		{FBB1AD04-FD45-46A5-B7AA-FF3D53D75934}.Debug|x64.Build.0 = Debug|x64
+		{FBB1AD04-FD45-46A5-B7AA-FF3D53D75934}.Debug|x86.ActiveCfg = Debug|Win32
+		{FBB1AD04-FD45-46A5-B7AA-FF3D53D75934}.Debug|x86.Build.0 = Debug|Win32
+		{FBB1AD04-FD45-46A5-B7AA-FF3D53D75934}.Release|x64.ActiveCfg = Release|x64
+		{FBB1AD04-FD45-46A5-B7AA-FF3D53D75934}.Release|x64.Build.0 = Release|x64
+		{FBB1AD04-FD45-46A5-B7AA-FF3D53D75934}.Release|x86.ActiveCfg = Release|Win32
+		{FBB1AD04-FD45-46A5-B7AA-FF3D53D75934}.Release|x86.Build.0 = Release|Win32
+		{B160ABB1-42DC-48F3-BE2C-80B1DA21753C}.Debug|x64.ActiveCfg = Debug|x64
+		{B160ABB1-42DC-48F3-BE2C-80B1DA21753C}.Debug|x64.Build.0 = Debug|x64
+		{B160ABB1-42DC-48F3-BE2C-80B1DA21753C}.Debug|x86.ActiveCfg = Debug|Win32
+		{B160ABB1-42DC-48F3-BE2C-80B1DA21753C}.Debug|x86.Build.0 = Debug|Win32
+		{B160ABB1-42DC-48F3-BE2C-80B1DA21753C}.Release|x64.ActiveCfg = Release|x64
+		{B160ABB1-42DC-48F3-BE2C-80B1DA21753C}.Release|x64.Build.0 = Release|x64
+		{B160ABB1-42DC-48F3-BE2C-80B1DA21753C}.Release|x86.ActiveCfg = Release|Win32
+		{B160ABB1-42DC-48F3-BE2C-80B1DA21753C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9480CD2-4161-4173-94C5-0A0D08F6703D}
 	EndGlobalSection
 EndGlobal

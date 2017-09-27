@@ -15,7 +15,8 @@ void GenericProblemController::loadFromFile()
 
 	if (!fileStream.is_open())
 	{
-		cout << "Nie mo¿na otworzyæ pliku. " << endl;
+		cout << "Nie mo¿na otworzyæ pliku. \nAktywny folder:" << endl;
+		system("cd");
 		system("pause");
 		return;
 	}

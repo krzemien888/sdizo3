@@ -1,17 +1,12 @@
-// sdizo3.cpp: Okreœla punkt wejœcia dla aplikacji konsoli.
-//
-
 #include "stdafx.h"
 #include "controllers\appController\AppController.h"
 
-
-#include "alghoritms\BackpackBruteforce\BackpackBruteforce.h"
 
 int main()
 {
 	AppController app;
 
-	try 
+	try
 	{
 		app.Run();
 	}
@@ -27,5 +22,5 @@ int main()
 	}
 
 
-    return 0;
+	return 0;
 }

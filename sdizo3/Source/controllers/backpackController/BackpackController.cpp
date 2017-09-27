@@ -5,6 +5,7 @@
 #include "alghoritms\IBackpackAlghoritm.h"
 #include "alghoritms\BackpackBruteforce\BackpackBruteforce.h"
 #include "alghoritms\BackpackGreedy\BackpackGreedy.h"
+#include "alghoritms\BackpackDynamic\BackpackDynamic.h"
 
 using namespace std;
 
@@ -47,7 +48,8 @@ void BackpackController::parseInput(const std::string & input)
 		applyAlghoritm(alghoritm);
 		break;
 	case 5:
-		
+		alghoritm = make_unique<BackpackDynamic>();
+		applyAlghoritm(alghoritm);
 		break;
 	default:
 		throw new std::invalid_argument("Unknown controller input");
