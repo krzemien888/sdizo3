@@ -157,6 +157,7 @@
     <ClInclude Include="Source\targetver.h" />
     <ClInclude Include="Source\views\app\appMenu.h" />
     <ClInclude Include="Source\views\genericView\GenericView.h" />
+    <ClInclude Include="TestController.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\alghoritms\Item.cpp" />
@@ -177,6 +178,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Source\views\app\appMenu.cpp" />
+    <ClCompile Include="TestController.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
