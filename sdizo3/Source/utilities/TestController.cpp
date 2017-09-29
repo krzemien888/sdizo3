@@ -50,9 +50,28 @@ void TestController::runBackpackBruteforce()
 			{
 				cout << "\rProgress: " << x + 1 << "%";
 
-				startTime = chrono::high_resolution_clock::now();
-				algh.apply(weights, values, backpackSize);
-				endTime = chrono::high_resolution_clock::now();
+				try {
+					startTime = chrono::high_resolution_clock::now();
+					algh.apply(weights, values, backpackSize);
+					endTime = chrono::high_resolution_clock::now();
+				}
+				catch (std::exception const & e)
+				{
+					cout << endl;
+					cout << "Error" << endl;
+					cout << e.what() << endl;
+					cout << "Testing stopped" << endl;
+					system("pause");
+					return;
+				}
+				catch (...)
+				{
+					cout << endl;
+					cout << "Testing stopped" << endl;
+					system("pause");
+					return;
+				}
+				
 
 				totalTime += (int)std::chrono::duration_cast<chrono::microseconds>(endTime - startTime).count();
 			}
