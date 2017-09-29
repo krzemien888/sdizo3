@@ -16,9 +16,9 @@ void BackpackDynamic::prepareSolutionMatrix(const std::vector<int> &weights, con
 	while (matrix.size() != weights.size() + 1)
 		matrix.push_back(std::vector<int>(backpackSize + 1, 0));
 	
-	const int itemAmount = weights.size();
+	const size_t itemAmount = weights.size();
 	
-	for (int x = 0; x <= itemAmount; x++)
+	for (int x = 0; x <= (int)itemAmount; x++)
 	{
 		for (int y = 0; y <= backpackSize; y++)
 		{

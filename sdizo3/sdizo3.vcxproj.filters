@@ -66,7 +66,7 @@
     <ClInclude Include="Source\alghoritms\Item.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="TestController.h">
+    <ClInclude Include="Source\utilities\TestController.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>
@@ -110,7 +110,7 @@
     <ClCompile Include="Source\alghoritms\Item.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="TestController.cpp">
+    <ClCompile Include="Source\utilities\TestController.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>

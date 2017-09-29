@@ -6,6 +6,8 @@
 #include "controllers\backpackController\BackpackController.h"
 #include "controllers\salesmanController\SalesmanController.h"
 
+#include "utilities\TestController.h"
+
 using namespace std;
 
 AppController::AppController() : GenericController()
@@ -49,5 +51,6 @@ void AppController::parseInput(const std::string &input)
 
 void AppController::runTests()
 {
-	
+	TestController tester;
+	tester.runAllTests();
 }
