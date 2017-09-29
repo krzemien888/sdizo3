@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 /sdizo3Main/BackpackBruteforce-multiplayer-7.5.csv
+*.csv
