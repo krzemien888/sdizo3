@@ -12,9 +12,17 @@ void BackpackBruteforce::apply(const std::vector<int> &weights, const std::vecto
 	solution.clear();
 
 	std::vector<Item> bestSolution;
+	if (weights.size() > 63)
+		throw new std::invalid_argument("Amount of subsets exceeds variable range (over 63)");
 
+	std::chrono::high_resolution_clock::time_point startTime;
+	std::chrono::high_resolution_clock::time_point endTime;
+	int currentTime = 0;
+
+	startTime = std::chrono::high_resolution_clock::now();
 	for (unsigned long long currSubset = 1; currSubset < pow(2, weights.size()); currSubset++)
 	{
+
 		int currValue = 0, currWeight = 0;
 		unsigned long long currItem = 1;
 		std::vector<Item> currSolution;
@@ -44,6 +52,11 @@ void BackpackBruteforce::apply(const std::vector<int> &weights, const std::vecto
 			bestValue = currValue;
 			bestSolution = currSolution;
 		}
+
+		endTime = std::chrono::high_resolution_clock::now();
+		currentTime = (int)std::chrono::duration_cast<std::chrono::minutes>(endTime - startTime).count();
+		if (currentTime > 60)
+			throw new std::length_error("Execution time exceeds 1 hour");
 	}
 
 	solution = bestSolution;
